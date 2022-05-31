@@ -1,0 +1,38 @@
+{
+  "name": "katana-backend-test",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "nauseantparrot <gfelipenickolas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "npx tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "npx tsc",
+    "prestart": "yarn build",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "joi": "^17.6.0",
+    "mongoose": "^6.3.4",
+    "morgan": "^1.10.0",
+    "redis": "^4.1.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/connect-timeout": "^0.0.36",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/uuid": "^8.3.4",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.2"
+  }
+}
