@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  app:
+    image: card-decks-app:latest
+    ports:
+      - 3000:3000
+    environment:
+      MONGO_URL: mongodb://mongo:27017/katana
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
