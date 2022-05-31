@@ -14,7 +14,7 @@ const drawCards = async (req: Request, res: Response, next: NextFunction) => {
   const drawedCards = [];
   const cardsAmount = Number(req.query.amount ?? 1);
 
-  for (let i = 0; i < cardsAmount; i++) {
+  for (let i = 0; i < cardsAmount && deck.cards.length > 0; i++) {
     const card = deck.cards.shift();
     drawedCards.push(card);
   }
